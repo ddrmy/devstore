@@ -2,5 +2,15 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --grid-rows-app: min-content auto max-content;
+  --grid-template-rows-app: min-content auto max-content;
 }
+
+/* | Classe que você quer usar | Variável que você cria           |
+| ------------------------- | -------------------------------- |
+| `font-sans`               | `--font-sans`                    |
+| `text-primary`            | `--color-primary`                |
+| `bg-primary`              | `--color-primary`                |
+| `rounded-card`            | `--radius-card`                  |
+| `shadow-card`             | `--shadow-card`                  |
+| `grid-cols-layout`        | `--grid-template-columns-layout` |
+| `grid-rows-app`           | `--grid-template-rows-app`       | */

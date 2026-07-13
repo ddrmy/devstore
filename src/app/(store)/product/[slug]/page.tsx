@@ -32,6 +32,21 @@ export async function generateMetadata({
     title: product.title,
   }
 }
+export async function generateStaticParams() {
+  const response = await api("/products/featured")
+
+  const products: Product[] = await response.json()
+
+  return [
+    // {
+    //   slug: "moletom-never-stop-learning",
+    // },
+
+    products.map((product) => {
+      return { slug: product.slug }
+    }),
+  ]
+}
 
 export default async function ProductPage({ params }: ProductProps) {
   const { slug } = await params

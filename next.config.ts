@@ -3,6 +3,7 @@ import type { NextConfig } from "next"
 const nextConfig: NextConfig = {
   images: {
     domains: ["github.com"],
+    qualities: [25, 50, 75, 100],
   },
   /* config options here */
 }

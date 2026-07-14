@@ -1,8 +1,7 @@
+import type { Metadata } from "next"
 import Image from "next/image"
-
 import { api } from "@/app/data/api"
 import type { Product } from "@/app/data/types/product"
-import { Metadata } from "next"
 
 interface ProductProps {
   params: Promise<{
@@ -32,6 +31,7 @@ export async function generateMetadata({
     title: product.title,
   }
 }
+
 export async function generateStaticParams() {
   const response = await api("/products/featured")
 
